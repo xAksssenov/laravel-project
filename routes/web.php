@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/', [MainController::class, 'index']);
+Route::get('/galery/{full_image}', [MainController::class, 'show']);
 
 Route::get('/hello', function () {
     return view('main/hello');
