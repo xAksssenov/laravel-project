@@ -6,6 +6,17 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
     </script>
+<style>
+    /*! normalize.css v8.0.1 |MIT License*/
+</style>
+<style>
+    body {
+        font-family: 'Nunito', sans-serif;
+    }
+    svg {
+        display: none;
+    }
+</style>
 </head>
 
 <header>
@@ -24,7 +35,10 @@
                     <a class="nav-link" href="contact">Contacts</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/article/show">Articles</a>
+                    <a class="nav-link" href="/article">Articles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/article/create">Create article</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/signup">SignUp</a>
