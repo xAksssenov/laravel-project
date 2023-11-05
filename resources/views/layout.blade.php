@@ -35,12 +35,14 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contact">Contacts</a>
                 </li>
+                @can('article')
                 <li class="nav-item">
                     <a class="nav-link" href="/article">Articles</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/article/create">Create article</a>
                 </li>
+                @endcan
                 <div class="navbar-nav d-flex justify-content-end">
                     @guest
                     <li class="nav-item">
@@ -49,7 +51,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/auth/login">SignIn</a>
                     </li>
-                    @endguest 
+                    @endguest
                     @auth
                     <li class="nav-item">
                         <a class="nav-link" href="/auth/logout">Logout</a>
