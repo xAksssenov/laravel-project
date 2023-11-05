@@ -24,10 +24,13 @@
                     <a class="nav-link" href="contact">Contacts</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="/article/show">Articles</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="/signup">SignUp</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/auth/login">SignIp</a>
+                    <a class="nav-link" href="/auth/login">SignIn</a>
                 </li>
             </ul>
         </div>
@@ -41,7 +44,7 @@
         </div>
     </main>
 
-    <footer style="background-color: black; color: white; position: absolute; bottom: 0; width: 100%;">
+    <footer style="background-color: black; color: white; position: fixed; bottom: 0; width: 100%;">
         Aksenov Kirill 221-322
     </footer>
 </body>

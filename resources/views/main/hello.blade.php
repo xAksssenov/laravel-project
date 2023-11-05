@@ -1,11 +1,11 @@
 @extends('layout')
 @section('content')
 <table class="table">
-    <thead> <tr> <th scope="col">Date</th>
-        <th scope="col">Name</th>
+    <thead> <tr> <th scope="col">date</th>
+        <th scope="col">name</th>
         <th scope="col">shortDesc</th>
-        <th scope="col">Desc</th>
-        <th scope="col">Image</th>
+        <th scope="col">desc</th>
+        <th scope="col">image</th>
         </tr>
         </thead>
         <tbody>
