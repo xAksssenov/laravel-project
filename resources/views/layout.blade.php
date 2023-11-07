@@ -37,21 +37,21 @@
                     <a class="nav-link" href="/article">Articles</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/create">Create article</a>
+                    <a class="nav-link" href="/article/create">Create article</a>
                 </li>
                 @endcan
                 <div class="navbar-nav d-flex justify-content-end">
                     @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="create">SignUp</a>
+                        <a class="nav-link" href="/auth/create">SignUp</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="login">SignIn</a>
+                        <a class="nav-link" href="/auth/login">SignIn</a>
                     </li>
                     @endguest
                     @auth
                     <li class="nav-item">
-                        <a class="nav-link" href="logout">Logout</a>
+                        <a class="nav-link" href="/auth/logout">Logout</a>
                     </li>
                     @endauth
                 </div>

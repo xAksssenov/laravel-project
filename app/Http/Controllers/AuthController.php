@@ -11,7 +11,7 @@ class AuthController extends Controller
 {
     public function create()
     {
-        return view('auth/signup');
+        // return view('auth/signup');
     }
     public function signUp(Request $request)
     {
@@ -27,13 +27,18 @@ class AuthController extends Controller
             'password' => Hash::make(request('password')),
         ]);
 
-        $user->createToken('myAppToken');
-        return redirect()->route('login');
+        $token = $user->createToken('myAppToken');
+        $response = [ 
+            'user' => $user,
+            'token' => $token
+        ];
+        return response()->json($response, 201);
+        // return redirect()->route('login');
     }
 
     public function login()
     {
-        return view('auth.login');
+        // return view('auth.login');
     }
 
     public function customLogin(Request $request)
@@ -48,21 +53,21 @@ class AuthController extends Controller
             'password' => request('password'),
         ];
 
-        if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
-            return redirect('/');
+        if (!Auth::attempt($credentials)) {
+            return response('Bad Login', 401);
         }
-
-        return back()->withErrors([
-            'email' => 'The provided credentials do not math out records.',
-        ]);
+        $user = User::where('email', request('email'))->first();
+        $token = $user->createToken('myAppToken');
+        $response = [ 
+            'user' => $user,
+            'token' => $token
+        ];
+        return response()->json($response, 201);
     }
 
     public function logout(Request $request)
     {
         Auth::logout();
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
-        return redirect('/');
+        return response(['Message' => 'Log out'], 201);
     }
 }
